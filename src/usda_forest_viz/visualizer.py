@@ -136,6 +136,8 @@ class StaticMapVisualizer:
         plt.tight_layout()
         
         if output_path:
+            # Create directory if it doesn't exist
+            Path(output_path).parent.mkdir(parents=True, exist_ok=True)
             plt.savefig(output_path, dpi=300, bbox_inches='tight')
             print(f"Figure saved to {output_path}")
         
@@ -180,6 +182,8 @@ class StaticMapVisualizer:
         plt.tight_layout()
         
         if output_path:
+            # Create directory if it doesn't exist
+            Path(output_path).parent.mkdir(parents=True, exist_ok=True)
             plt.savefig(output_path, dpi=300, bbox_inches='tight')
             print(f"Figure saved to {output_path}")
         
@@ -218,6 +222,8 @@ class StaticMapVisualizer:
         plt.tight_layout()
         
         if output_path:
+            # Create directory if it doesn't exist
+            Path(output_path).parent.mkdir(parents=True, exist_ok=True)
             plt.savefig(output_path, dpi=300, bbox_inches='tight')
             print(f"Figure saved to {output_path}")
         
@@ -355,6 +361,8 @@ class InteractiveMapVisualizer:
             m: Folium map object
             output_path: Path to save HTML file
         """
+        # Create directory if it doesn't exist
+        Path(output_path).parent.mkdir(parents=True, exist_ok=True)
         m.save(output_path)
         print(f"Interactive map saved to {output_path}")
 
@@ -449,6 +457,8 @@ class PlotlyVisualizer:
         )
         
         if output_path:
+            # Create directory if it doesn't exist
+            Path(output_path).parent.mkdir(parents=True, exist_ok=True)
             fig.write_html(output_path)
             print(f"Time series saved to {output_path}")
         
