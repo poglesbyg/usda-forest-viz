@@ -1,0 +1,25 @@
+[project]
+name = "usda-forest-viz"
+version = "0.1.0"
+description = "Python tools for downloading and visualizing USDA Forest Service geospatial datasets"
+readme = "README.md"
+authors = [
+    { name = "Paul Greenwood", email = "poglesbyg@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "folium>=0.20.0",
+    "geopandas>=1.1.1",
+    "matplotlib>=3.10.7",
+    "pandas>=2.3.3",
+    "plotly>=6.3.1",
+    "pyogrio>=0.11.1",
+    "requests>=2.32.5",
+]
+
+[project.scripts]
+usda-forest-viz = "usda_forest_viz:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
